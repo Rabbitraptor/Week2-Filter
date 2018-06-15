@@ -21,10 +21,6 @@ input[type="checkbox"] {
   width: 0;
   height: 0; }
 
-a {
-  text-decoration: none;
-  color: #000; }
-
 .content {
   display: flex;
   flex-direction: column; }
@@ -284,6 +280,10 @@ a {
   flex-direction: row;
   flex-wrap: wrap; }
 
+.product-list a {
+  text-decoration: none;
+  color: #000; }
+
 .product-item {
   flex: 1 1 auto;
   display: flex;
@@ -327,10 +327,9 @@ a {
   .product-item-mini .product-img {
     flex: 0 0 auto;
     width: 220px;
-    height: 220px; }
-    .product-item-mini .product-img img {
-      width: inherit;
-      height: inherit; }
+    height: 220px;
+    background-size: cover;
+    background-position: center; }
   .product-item-mini .product-content {
     padding: 12px 24px;
     flex: 0 1 auto; }
