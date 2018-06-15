@@ -49,17 +49,21 @@ input[type="checkbox"] {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  padding: 0 16px;
+  padding: 6px 16px;
   border-radius: 4px;
   background-color: #EBEBEB; }
   .breadcrumb-list .breadcrumb-item {
-    padding: 0 6px;
+    display: flex;
+    align-items: center;
     color: #7828B4; }
+    .breadcrumb-list .breadcrumb-item a {
+      padding: 6px; }
     .breadcrumb-list .breadcrumb-item-btn {
-      cursor: pointer; }
+      cursor: pointer;
+      white-space: nowrap; }
     .breadcrumb-list .breadcrumb-item + .breadcrumb-item::before {
       content: "/";
-      padding: 6px; }
+      padding: 0 6px; }
     .breadcrumb-list .breadcrumb-item:last-child {
       color: #000; }
       .breadcrumb-list .breadcrumb-item:last-child .breadcrumb-item-btn {
@@ -240,6 +244,10 @@ input[type="checkbox"] {
       margin-top: 6px; }
     .sidebar__categories .filter .filter-tags:last-child {
       margin-bottom: 0; }
+    .sidebar__categories .filter .filter-tags label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
   .sidebar__categories .filter i {
     color: #fff;
     margin-right: 6px; }
@@ -445,21 +453,25 @@ input[type="checkbox"] {
       padding: 4px 0; }
   .filter-tags {
     margin-bottom: 6px; }
-  .product-item .product-sort-maker {
-    margin-bottom: 6px; }
   .product-item .product-img {
     height: 270px; }
+  .product-item .product-content .product-title {
+    font-size: 32px; }
+  .product-item .product-content .product-sort-maker {
+    margin-bottom: 6px; }
   .product-item-mini {
     flex-direction: column; }
-    .product-item-mini .product-img {
-      width: 100%; }
-    .product-item-mini .product-info {
+    .product-item-mini .product-content .product-title {
+      font-size: 24px; }
+    .product-item-mini .product-content .product-info {
       display: flex;
       flex-direction: column;
       align-items: flex-start; }
-      .product-item-mini .product-info .product-info-container + .product-info-container {
+      .product-item-mini .product-content .product-info .product-info-container + .product-info-container {
         margin-left: 0;
         margin-top: 10px; }
+    .product-item-mini .product-img {
+      width: 100%; }
   .product-sort {
     flex-wrap: wrap; }
   .product-info {
@@ -510,4 +522,6 @@ input[type="checkbox"] {
         .wrap .sidebar .container .filter-tags {
           padding: 2px 0; }
         .wrap .sidebar .container.is-open {
-          background-color: #EBEBEB; } }
+          background-color: #EBEBEB; }
+  .product-item .product-content .product-title {
+    font-size: 28px; } }
