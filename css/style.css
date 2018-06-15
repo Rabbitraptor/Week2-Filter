@@ -46,18 +46,20 @@ input[type="checkbox"] {
 
 .breadcrumb-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  padding: 0 16px;
   border-radius: 4px;
   background-color: #EBEBEB; }
   .breadcrumb-list .breadcrumb-item {
-    padding: 10px 0;
+    padding: 0 6px;
     color: #7828B4; }
     .breadcrumb-list .breadcrumb-item-btn {
-      padding: 8px 16px;
       cursor: pointer; }
     .breadcrumb-list .breadcrumb-item + .breadcrumb-item::before {
-      content: "/"; }
+      content: "/";
+      padding: 6px; }
     .breadcrumb-list .breadcrumb-item:last-child {
       color: #000; }
       .breadcrumb-list .breadcrumb-item:last-child .breadcrumb-item-btn {
@@ -438,7 +440,6 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 770px) {
   .breadcrumb-list {
-    flex-wrap: wrap;
     padding: 0 6px; }
     .breadcrumb-list-item {
       padding: 4px 0; }
