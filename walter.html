@@ -9,29 +9,25 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/mobile-content.scss">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            // dropdown open/close
-            $(".dropdown-btn").click(function(){
-                $(this).parents(".dropdown").toggleClass("is-open");
+            $(document).ready(function(){
+                // dropdown open/close
+                $(".dropdown-btn").click(function(){
+                    $(this).parents(".dropdown").toggleClass("is-open");
+                });
+                // sidebar content open/close
+                $(".sidebar-title").click(function(){
+                    $(this).parents(".sidebar__date, .sidebar__location, .sidebar__categories").toggleClass("is-open");
+                });
+                // result tags click remove
+                $(".main-result .filter-tags label").click(function(){
+                    $(this).parents(".filter-tags").addClass("is-close");
+                });
             });
-            // sidebar content open/close
-            $(".sidebar-title .fa-plus").click(function(){
-                $(this).parents(".sidebar__date").toggleClass("is-open");
-            });
-            $(".sidebar-title .fa-plus").click(function(){
-                $(this).parents(".sidebar__location").toggleClass("is-open");
-            });
-            $(".sidebar-title .fa-plus").click(function(){
-                $(this).parents(".sidebar__categories").toggleClass("is-open");
-            });
-            $(".main-result .filter-tags label").click(function(){
-                $(this).parents(".filter-tags").addClass("is-close");
-            });
-        });
-    </script>
+        </script>
 </head>
 <body>
     <!-- Header -->
@@ -50,10 +46,10 @@
             </a>
         </div>
         <div class="headder__right">
-            <label for="">
+            <div class="search-bar">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Explore your own activities">
-            </label>
+            </div>
         </div>
     </div>
 
@@ -176,13 +172,13 @@
                 <div class="breadcrumb">
                     <div class="breadcrumb-list">
                         <div class="breadcrumb-item">
-                            <a class="breadcrumb-item-btn">Homepage</a>
+                            <a href="index.html" class="breadcrumb-item-btn">Homepage</a>
                         </div>
                         <div class="breadcrumb-item">
-                            <a class="breadcrumb-item-btn">Explore</a>
+                            <a href="index.html" class="breadcrumb-item-btn">Explore</a>
                         </div>
                         <div class="breadcrumb-item">
-                            <a class="breadcrumb-item-btn">Walter White's Cooking Party</a>
+                            <a href="#" class="breadcrumb-item-btn">Walter White's Cooking Party</a>
                         </div>
                     </div>
                 </div>
@@ -194,25 +190,10 @@
             <div class="main__body">
                 <div class="product-list">
                     <div class="product-item">
-                        <div class="product-img" style=" background-image: url(img/walter.jpg) ">
-                        </div>
+                        <img class="product-img" style=" background-image: url(img/walter.jpg) ">
                         <div class="product-content">
                             <div class="product-title">
                                 Walter White's Cooking Party
-                            </div>
-                            <div class="product-text">
-                                <p>
-                                    You will learn all about how to cooking best blue crystal and become a super crystal seller. Just say my name and join us, you only one chance.
-                                </p>
-                                <p>
-                                    We have a professional lab and really good partner you have never seen before, especially is Jessie, he business with me over 6 years ago, now he already buys a villa in New Zealand, Thailand, and Japan. 
-                                </p>
-                                <p>
-                                    My business is never made mistake, because I want every who join us will turn the life's good. 
-                                </p>
-                                <p>
-                                    so what you waitting for?
-                                </p>
                             </div>
                             <div class="product-sort">
                                 <div class="product-sort-maker">Walter White</div>
@@ -225,22 +206,30 @@
                                 </div>
                             </div>
                             <div class="product-info">
-                                <div class="product-info-container">
-                                    <div class="product-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Taichung</span>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Taichung</span>
                                 </div>
-                                <div class="product-info-container">
-                                    <div class="product-date">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <div class="date-value">
-                                            <span class="date-value-start">2018/6/16</span>
-                                            -
-                                            <span class="date-value-end">2018/7/1</span>
-                                        </div>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="date-value">
+                                        2018/07/14 - 2018/08/14
+                                    </span>
                                 </div>
+                            </div>
+                            <div class="product-article">
+                                <p>
+                                    You will learn all about how to cooking best blue crystal and become a super crystal seller. Just say my name and join us, you only one chance.
+                                </p>
+                                <p>
+                                    We have a professional lab and really good partner you have never seen before, especially is Jessie, he business with me over 6 years ago, now he already buys a villa in New Zealand, Thailand, and Japan. 
+                                </p>
+                                <p>
+                                    My business is never made mistake, because I want every who join us will turn the life's good. 
+                                </p>
+                                <p>
+                                    so what you waitting for?
+                                </p>
                             </div>
                         </div>
                     </div>

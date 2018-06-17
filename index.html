@@ -18,15 +18,10 @@
                 $(this).parents(".dropdown").toggleClass("is-open");
             });
             // sidebar content open/close
-            $(".sidebar-title .fa-plus").click(function(){
-                $(this).parents(".sidebar__date").toggleClass("is-open");
+            $(".sidebar-title").click(function(){
+                $(this).parents(".sidebar__date, .sidebar__location, .sidebar__categories").toggleClass("is-open");
             });
-            $(".sidebar-title .fa-plus").click(function(){
-                $(this).parents(".sidebar__location").toggleClass("is-open");
-            });
-            $(".sidebar-title .fa-plus").click(function(){
-                $(this).parents(".sidebar__categories").toggleClass("is-open");
-            });
+            // result tags click remove
             $(".main-result .filter-tags label").click(function(){
                 $(this).parents(".filter-tags").addClass("is-close");
             });
@@ -50,10 +45,10 @@
             </a>
         </div>
         <div class="headder__right">
-            <label for="">
+            <div class="search-bar">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Explore your own activities">
-            </label>
+            </div>
         </div>
     </div>
 
@@ -67,8 +62,8 @@
             <!-- Location -->
             <div class="container sidebar__location">
                 <div class="sidebar-title">
-                    <span>Location</span>
-                    <i class="fas fa-plus"></i>
+                        <span>Location</span>
+                        <i class="fas fa-plus"></i>
                 </div>
                 <div class="content">
                     <div class="dropdown">
@@ -174,7 +169,7 @@
             <div class="main__headder">
                 <div class="main-result">
                     <div class="result-title">
-                        Showing<span>15</span>result by...
+                        Showing<span>3</span>result by...
                     </div>
                     <div class="filter">
                         <div class="filter-tags">
@@ -202,9 +197,8 @@
             <!-- Main__Body -->
             <div class="main__body">
                 <div class="product-list">
-                    <a  href="walter.html" class="product-item product-item-mini">
-                        <div class="product-img" style=" background-image: url(img/walter.jpg) ">
-                        </div>
+                    <a  href="walter.html" class="product-item-mini">
+                        <img class="product-img" style=" background-image: url(img/walter.jpg) ">
                         <div class="product-content">
                             <div class="product-title">
                                 Walter White's Cooking Party
@@ -212,15 +206,6 @@
                             <div class="product-text">
                                 <p>
                                     You will learn all about how to cooking best blue crystal and become a super crystal seller. Just say my name and join us, you only one chance.
-                                </p>
-                                <p>
-                                    We have a professional lab and really good partner you have never seen before, especially is Jessie, he business with me over 6 years ago, now he already buys a villa in New Zealand, Thailand, and Japan. 
-                                </p>
-                                <p>
-                                    My business is never made mistake, because I want every who join us will turn the life's good. 
-                                </p>
-                                <p>
-                                    so what you waitting for?
                                 </p>
                             </div>
                             <div class="product-sort">
@@ -234,28 +219,21 @@
                                 </div>
                             </div>
                             <div class="product-info">
-                                <div class="product-info-container">
-                                    <div class="product-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Taichung</span>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Taichung</span>
                                 </div>
-                                <div class="product-info-container">
-                                    <div class="product-date">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <div class="date-value">
-                                            <span class="date-value-start">2018/6/16</span>
-                                            -
-                                            <span class="date-value-end">2018/7/1</span>
-                                        </div>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="date-value">
+                                        2018/07/14 - 2018/08/14
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="jesse.html" class="product-item product-item-mini">
-                        <div class="product-img" style=" background-image: url(img/jesse.jpg) ">
-                        </div>
+                    <a href="jesse.html" class="product-item-mini">
+                        <img class="product-img" style=" background-image: url(img/jesse.jpg) ">
                         <div class="product-content">
                             <div class="product-title">
                                 Jesse Pinkman's Cooking Party
@@ -263,15 +241,6 @@
                             <div class="product-text">
                                 <p>
                                     You will learn all about how to cooking best blue crystal and become a super crystal seller. Just join us, you only one chance.
-                                </p>
-                                <p>
-                                    We have a professional lab and really good partner you have never seen before, especially is Mr.White, he business with me over 6 years ago, now he already buys a villa in New Zealand, Thailand, and Japan. 
-                                </p>
-                                <p>
-                                    My business is never made mistake, because I want every who join us will turn the life's good. 
-                                </p>
-                                <p>
-                                    so what you waitting for?
                                 </p>
                             </div>
                             <div class="product-sort">
@@ -285,28 +254,21 @@
                                 </div>
                             </div>
                             <div class="product-info">
-                                <div class="product-info-container">
-                                    <div class="product-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Taichung</span>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Taichung</span>
                                 </div>
-                                <div class="product-info-container">
-                                    <div class="product-date">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <div class="date-value">
-                                            <span class="date-value-start">2018/6/16</span>
-                                            -
-                                            <span class="date-value-end">2018/7/1</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <span class="product-info__item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="date-value">
+                                        2018/07/14 - 2018/08/14
+                                    </span>
+                                </span>
                             </div>
                         </div>
                     </a>
-                    <a href="gus.html" class="product-item product-item-mini">
-                        <div class="product-img" style=" background-image: url(img/gus.jpg) "> 
-                        </div>
+                    <a href="gus.html" class="product-item-mini">
+                        <img class="product-img" style=" background-image: url(img/gus.jpg) ">
                         <div class="product-content">
                             <div class="product-title">
                                 Gus Fring's Cooking Party
@@ -314,15 +276,6 @@
                             <div class="product-text">
                                 <p>
                                     You will learn all about how to cooking best fried chicken and become a super manager. Just join me, you only one chance.
-                                </p>
-                                <p>
-                                    We have a professional kitchen and really good partner you have never seen before, especially is Mike, he business with me over 6 years ago, now he already buys a villa in New Zealand, Thailand, and Japan. 
-                                </p>
-                                <p>
-                                    My business is never made mistake, because I want every who join us will turn the life's good. 
-                                </p>
-                                <p>
-                                    so what you waitting for?
                                 </p>
                             </div>
                             <div class="product-sort">
@@ -336,21 +289,15 @@
                                 </div>
                             </div>
                             <div class="product-info">
-                                <div class="product-info-container">
-                                    <div class="product-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Taichung</span>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Taichung</span>
                                 </div>
-                                <div class="product-info-container">
-                                    <div class="product-date">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <div class="date-value">
-                                            <span class="date-value-start">2018/6/16</span>
-                                            -
-                                            <span class="date-value-end">2018/7/1</span>
-                                        </div>
-                                    </div>
+                                <div class="product-info__item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="date-value">
+                                        2018/07/14 - 2018/08/14
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -361,26 +308,26 @@
 
             <!-- Main__Footer -->
             <div class="main__footer">
-                <div class="page-changer">
-                    <div class="page-changer-btn">
+                <div class="page-nav">
+                    <div class="page-nav-btn">
                         <span class="fas fa-angle-double-left"></span>
                     </div>
-                    <div class="page-changer-btn">
+                    <div class="page-nav-btn">
                         <span>1</span>
                     </div>
-                    <div class="page-changer-btn">
+                    <div class="page-nav-btn">
                         <span>2</span>
                     </div>
-                    <div class="page-changer-btn">
+                    <div class="page-nav-btn">
                         <span>3</span>
                     </div>
-                    <div class="page-changer-btn">
+                    <div class="page-nav-btn">
                         <span>4</span>
                     </div>
-                    <div class="page-changer-btn">
+                    <div class="page-nav-btn">
                         <span>5</span>
                     </div>
-                    <div class="page-changer-btn">
+                    <div class="page-nav-btn">
                         <span class="fas fa-angle-double-right"></span>
                     </div>
                 </div>
