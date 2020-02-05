@@ -616,7 +616,7 @@ input[type="date"]::-webkit-clear-button {
         .wrap .sidebar .container .filter-tags {
           padding: 2px 0; }
     .wrap .main {
-      padding: 24px 0; }
+      padding: 24px 24px; }
     .wrap .breadcrumb {
       padding: 0 12px; }
   .product-item .product-content .product-title {
